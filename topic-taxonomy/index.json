@@ -3,7 +3,7 @@
   "description": "Identify anti-patterns in a topic taxonomy and provide recommendations for improvement using dynamic properties.",
   "details": {
     "steps": [
-      { "title": "Diagnose the Chaos", "text": "step1.md", "verify": "verify1.sh" }
+      { "title": "Configure the Lab", "text": "setup.md", "verify": "verify1.sh" }
     ],
     "intro": { "text": "intro.md", "background": "setup.sh" }
   },

@@ -1,15 +1,15 @@
 #!/bin/bash
 
-EXPECTED="acme/sales/order/created/v1/>"
+EXPECTED="200"
 
 RESULT=$(curl -s -u admin:admin \
   "http://localhost:8080/SEMP/v2/config/msgVpns/default/queues/orderQueue/subscriptions" \
-  | jq -r '.data[].subscriptionTopic')
+  | jq -r '.responseCode":200')
 
 if echo "$RESULT" | grep -q "$EXPECTED"; then
-  echo "Taxonomy correctly configured."
+  echo "Setup is done. You can now proceed to the next step."
   exit 0
 else
-  echo "Subscription topic does not match expected taxonomy pattern."
+  echo "Setup is still in progress."
   exit 1
 fi
