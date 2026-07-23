@@ -1,0 +1,1 @@
+The environment is currently created. This means a Solace broker will start and there will be some preconfiguration. This will take some minutes. Click the "check" button, to verify everything is setup correctly.
