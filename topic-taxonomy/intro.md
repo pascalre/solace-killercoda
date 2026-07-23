@@ -1,5 +1,1 @@
-
-<br>
-
-Let's learn how users can copy or exec code blocks
-
+A new customer is introducing EDA and created a first draft for the topic taxonomy. You are asked to review the architecture before it goes into production.
