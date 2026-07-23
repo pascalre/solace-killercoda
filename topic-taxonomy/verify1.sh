@@ -1,12 +1,10 @@
 #!/bin/bash
 
-EXPECTED="200"
+STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+  -u admin:admin \
+  http://localhost:8080/SEMP/v2/config/about)
 
-RESULT=$(curl -s -u admin:admin \
-  "http://localhost:8080/SEMP/v2/config/msgVpns/default/queues/orderQueue/subscriptions" \
-  | jq -r '.responseCode":200')
-
-if echo "$RESULT" | grep -q "$EXPECTED"; then
+if [ "$STATUS" -eq 200 ]; then
   echo "Setup is done. You can now proceed to the next step."
   exit 0
 else
