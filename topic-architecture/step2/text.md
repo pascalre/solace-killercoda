@@ -6,12 +6,12 @@ docker exec -it solace cli
 List all available Queues
 ```
 show queue *
-```
+```{{exec}}
 
 Check the preconfigured Queues and subscriptions:
 ```
 show queue demo subscriptions
-```
+```{{exec}}
 
 The recommended topic taxonomy for ACME Retail is
 ```
