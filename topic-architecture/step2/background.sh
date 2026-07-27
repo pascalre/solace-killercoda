@@ -33,7 +33,7 @@ curl -X POST -u admin:admin \
 curl -X POST -u admin:admin \
   -H "Content-Type: application/json" \
   -d '{"subscriptionTopic":"acme/inventory/stock/update/v1/>"}' \
-  http://localhost:8080/SEMP/v2/config/msgVpns/default/queues/shipment/subscriptions
+  http://localhost:8080/SEMP/v2/config/msgVpns/default/queues/inventory/subscriptions
 
 # customer queue
 curl -X POST -u admin:admin \
@@ -44,4 +44,4 @@ curl -X POST -u admin:admin \
 curl -X POST -u admin:admin \
   -H "Content-Type: application/json" \
   -d '{"subscriptionTopic":"acme/crm/customer/created/12345/>"}' \
-  http://localhost:8080/SEMP/v2/config/msgVpns/default/queues/shipment/subscriptions
+  http://localhost:8080/SEMP/v2/config/msgVpns/default/queues/customer/subscriptions
