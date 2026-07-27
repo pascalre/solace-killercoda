@@ -1,1 +1,0 @@
-kill -SIGINT "$LOG_PID" 2>/dev/null

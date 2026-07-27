@@ -17,11 +17,13 @@
             {
         "title": "Check configuration",
         "text": "step2/text.md",
-        "foreground": "step2/foreground.sh",
         "background": "step2/background.sh",
         "verify": "step2/verify.sh"
       }
-    ]
+    ],
+    "finish": {
+      "text": "finish/text.md"
+    }
   },
   "backend": {
     "imageid": "ubuntu"

@@ -1,3 +1,5 @@
+kill -SIGINT "$LOG_PID" 2>/dev/null
+
 until curl -s -o /dev/null http://localhost:8080/SEMP/v2/config/about; do
   sleep 2;
 done
