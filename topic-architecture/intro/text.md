@@ -1,8 +1,25 @@
-A new customer is introducing EDA and created a first draft for the topic taxonomy. You are asked to review the architecture before it goes into production.
+## Welcome to ACME Retail
 
-The recommended topic taxonomy for ACME Retail is
+ACME Retail is rolling out Event-Driven Architecture for the first time. Before the first event hits production, someone needs to sign off on the topic design — and that someone is you.
+
+A junior architect put together a first draft of the topic taxonomy and pre-configured a handful of queues to demo it. It looked fine in the design review. It does not look fine anymore.
+
+Your job: review the architecture, find what's broken, and fix it before this goes live.
+
+## ACME Retail's Topic Taxonomy
 ```
 acme/<domain>/<noun>/<verb>/<version>/<properties>
 ```
 
-They defined that everything in their topic strings must be lowercase. Verbs must be written in past tense. Subscribers must use trailing multi level wild cards, to match future dynamic properties.
+The rules, non-negotiable:
+
+| Rule | Requirement |
+|---|---|
+| Casing | Everything lowercase — no exceptions |
+| Verb tense | Past tense (`created`, not `create`) |
+| Wildcards | Subscribers use a trailing multi-level wildcard (`>`) to stay compatible with future dynamic properties |
+| Versioning | ACME is early in its EDA journey — every event is currently `v1` |
+
+Four rules. One broker. A handful of queues that don't follow them.
+
+Let's find out which ones.
