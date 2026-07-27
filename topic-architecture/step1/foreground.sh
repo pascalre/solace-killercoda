@@ -1,5 +1,5 @@
 until docker inspect solace >/dev/null 2>&1; do
-  sleep 1
+  sleep 2
 done
 
 docker logs solace -f
