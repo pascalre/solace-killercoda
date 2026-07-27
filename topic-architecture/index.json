@@ -12,12 +12,12 @@
         "title": "Configure the Lab",
         "text": "step1/text.md",
         "foreground": "step1/foreground.sh",
-        "background": "step1/background.sh",
         "verify": "step1/verify.sh"
       },
             {
         "title": "Check configuration",
         "text": "step2/text.md",
+        "background": "step2/background.sh",
         "verify": "step2/verify.sh"
       }
     ]
