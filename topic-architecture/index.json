@@ -2,11 +2,24 @@
   "title": "Topic Architecture",
   "description": "Identify anti-patterns in a topic taxonomy and provide recommendations for improvement using dynamic properties.",
   "details": {
+    "intro": {
+      "title": "Intro",
+      "text": "intro/text.md"
+    },
     "steps": [
-      { "title": "Configure the Lab", "text": "step1.md", "verify": "verify1.sh" },
-      { "title": "Check Configuration", "text": "step2.md", "verify": "verify2.sh" }
-    ],
-    "intro": { "text": "intro.md", "background": "setup.sh" }
+      {
+        "title": "Configure the Lab",
+        "text": "step1/text.md",
+        "foreground": "step1/foreground.sh",
+        "background": "step1/background.sh",
+        "verify": "step1/verify.sh"
+      },
+            {
+        "title": "Check configuration",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      }
+    ]
   },
   "backend": {
     "imageid": "ubuntu"
