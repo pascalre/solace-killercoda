@@ -1,3 +1,14 @@
+## Setup
+
+Before you touch anything, know what each queue is actually supposed to receive. This is the contract — anything that doesn't match it is a bug, not a style choice.
+
+| Queue | Should receive |
+|---|---|
+| `customer` | All customer created events, across **every** version |
+| `inventory` | Stock updates, `v1` only |
+| `orders` | Created orders, `v1` only |
+| `shipping` | Shipment shipped events, `v1` only |
+
 ## Time to Investigate
 
 The broker is up. Somewhere in there are queues that were configured before anyone checked them against the standard. Let's find out how bad it is.
@@ -43,7 +54,7 @@ remove the subscription that violates the standard
 no subscription topic <TOPIC_NAME>
 ```
 
-replace it with one that follows acme/<domain>/<noun>/<verb>/<version>/<properties>
+replace it with one that follows `acme/<domain>/<noun>/<verb>/<version>/<properties>`
 
 ```
 subscription topic <TOPIC_NAME>

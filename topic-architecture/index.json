@@ -9,7 +9,7 @@
     },
     "steps": [
       {
-        "title": "Configure the Lab",
+        "title": "Setting the Stage",
         "text": "step1/text.md",
         "foreground": "step1/foreground.sh",
         "verify": "step1/verify.sh"
