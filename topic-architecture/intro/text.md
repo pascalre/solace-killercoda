@@ -15,7 +15,7 @@ The rules, non-negotiable:
 
 | Rule | Requirement |
 |---|---|
-| Casing | Everything lowercase — no exceptions |
+| Casing | Everything lowercase |
 | Verb tense | Past tense (`created`, not `create`) |
 | Wildcards | Subscribers use a trailing multi-level wildcard (`>`) to stay compatible with future dynamic properties |
 | Versioning | ACME is early in its EDA journey — every event is currently `v1` |

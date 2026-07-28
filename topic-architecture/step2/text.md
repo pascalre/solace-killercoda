@@ -4,7 +4,7 @@ Before you touch anything, know what each queue is actually supposed to receive.
 
 | Queue | Should receive |
 |---|---|
-| `customer` | All customer created events, across **every** version |
+| `customer` | All customer related events, `v1` and `v2` |
 | `inventory` | Stock updates, `v1` only |
 | `orders` | Created orders, `v1` only |
 | `shipping` | Shipment shipped events, `v1` only |
